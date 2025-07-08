@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Israt Jahan Rakhi | Portfolio</title>
+  
+
+  <style>
+    :root {
+      --bg-light: #fdf6f9;
+      --text-light: #333;
+      --primary-color: #d354a6;
+      --accent-color: #e67e22;
+
+      --bg-dark: #1a1a1a;
+      --text-dark: #eee;
+    }
+
+    body {
+      background-color: var(--bg-light);
+      color: var(--text-light);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0 20px 50px 20px;
+      transition: background-color 0.5s ease, color 0.5s ease;
+    }
+
+    body.dark {
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    h1, h2, h3 {
+      font-weight: 700;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 50px 0 40px 0;
+    }
+
+    .profile-pic {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 4px solid var(--primary-color);
+      object-fit: cover;
+      margin-bottom: 20px;
+      box-shadow: 0 0 15px var(--primary-color);
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: var(--accent-color);
+    }
+
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    section {
+      margin-bottom: 50px;
+    }
+
+    .skills-list {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .skills-list li {
+      background: var(--primary-color);
+      color: white;
+      padding: 8px 15px;
+      border-radius: 25px;
+      font-weight: 600;
+      box-shadow: 0 4px 6px rgba(211, 84, 166, 0.3);
+    }
+
+    .project {
+      margin-bottom: 30px;
+      background: #ffe6f0;
+      padding: 15px 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px #d354a6;
+      transition: transform 0.3s ease;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px #d354a6;
+    }
+
+    .email-button {
+      display: inline-block;
+      background: var(--primary-color);
+      color: white;
+      padding: 15px 30px;
+      font-weight: 700;
+      border-radius: 40px;
+      text-decoration: none;
+      box-shadow: 0 6px 15px #d354a6;
+      transition: background-color 0.3s ease;
+    }
+
+    .email-button:hover {
+      background: var(--accent-color);
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      margin-top: 40px;
+      padding-top: 10px;
+      border-top: 1px solid var(--primary-color);
+      color: var(--primary-color);
+    }
+
+    #toggle-dark {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      background: var(--primary-color);
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      padding: 8px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 6px 10px #d354a6;
+      transition: background-color 0.3s ease;
+      z-index: 1000;
+    }
+
+    #toggle-dark:hover {
+      background: var(--accent-color);
+    }
+
+    @media(max-width: 600px) {
+      body {
+        padding: 0 10px 40px 10px;
+      }
+
+      .skills-list {
+        justify-content: center;
+      }
+
+      .project {
+        padding: 10px 15px;
+      }
+    }
+  </style>
+</head>
+ 
+
+</head>
+<body>
+  <button id="toggle-dark" aria-label="Toggle Dark Mode">🌙</button>
+
+  <header class="hero">
+    <img src="{{ github_pic }}" alt="Israt Jahan Rakhi" class="profile-pic" />
+    <h1>Israt Jahan Rakhi</h1>
+    <p class="subtitle">Computer Science & Engineering Student at BRAC University</p>
+  </header>
+  
+ 
+
+
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I'm a passionate computer science and engineering student at BRAC University, driven by curiosity and innovation. My interests lie in AI, software development, and solving real-world problems through technology. I enjoy building practical projects, collaborating with others, and continuously learning new tools and techniques to sharpen my skills.</p>
+      <p><strong>Address:</strong> Bishnopur, Badalgachi, Naogaon</p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li>Python</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Django</li>
+        <li>Flask</li>
+        <li>Java</li>
+        <li>React</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+
+      <article class="project">
+        <h3>Campus Companion</h3>
+        <p>Campus Companion is a smart web-based assistant designed to enhance student life at BRAC University. It offers features like a class routine viewer, lost & found board, peer chatroom, mental health check-in, teacher directory, and a quiz game—all in one platform to support learning, connection, and well-being on campus.</p>
+      </article>
+
+      <article class="project">
+        <h3>Blood Donation Management System</h3>
+        <p>A smart and efficient platform to connect donors, patients, and blood banks. It allows users to search by blood group, request donations, track eligibility, and manage blood donation events—all in one centralized system for faster, life-saving support.</p>
+      </article>
+    </section>
+
+    <section id="resume">
+      <h2>Resume Summary</h2>
+      <p><strong>Email:</strong> <a href="mailto:isratjahanrakhi0211@gmail.com">isratjahanrakhi0211@gmail.com</a> | <strong>Phone:</strong> 01310760126</p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/rakhi0211" target="_blank" rel="noopener">github.com/rakhi0211</a></p>
+      <p><strong>Facebook:</strong> <a href="https://www.facebook.com/seo.with.israt" target="_blank" rel="noopener">facebook.com/seo.with.israt</a></p>
+      <p>Motivated and detail-oriented computer science and engineering student at BRAC University with a strong foundation in software development, artificial intelligence, and web technologies. Passionate about building innovative solutions that solve real-world problems. Experienced in full-stack development using Python, Flask, Django, and React, with a growing interest in machine learning and natural language processing.</p>
+      <p><strong>Education:</strong> B.Sc. in Computer Science and Engineering, BRAC University (Expected 2026)</p>
+      <p><strong>Skills & Tools:</strong> Python, Java, HTML, CSS, JavaScript, React, Flask, Django, Git, MySQL, VS Code</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <p>If you want to get in touch, please feel free to email me:</p>
+      <a href="mailto:isratjahanrakhi0211@gmail.com" class="email-button">📧 Email Me</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Israt Jahan Rakhi</p>
+  </footer>
+
+  <script src="{{ url_for('static', filename='darkmode.js') }}"></script>
+</body>
+</html>
